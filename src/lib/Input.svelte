@@ -10,25 +10,25 @@
 </script>
 
 <main>
-    <div>
-        <label for={name}>{label}</label>
-        <input {placeholder} {type} />
-    </div>
+    <label>
+        {label}
+        <input {placeholder} {type} {name} id={name} />
+    </label>
 </main>
 
 <style>
     @import '../shared.css';
 
-    div {
+    label {
         display: flex;
         flex-direction: column;
         gap: 4px;
         color: var(--color-text-primary);
+        min-width: 256px;
+        width: fit-content;
     }
 
     input {
-        min-width: 256px;
-        width: fit-content;
         padding: 8px 12px;
         border-radius: var(--border-radius-12);
         border: 1px solid var(--color-border-primary);
